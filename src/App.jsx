@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import UserList from './UserList';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +15,7 @@ function App() {
   const { name, age } = person;
   console.log('Destructured:', name, age);
 
-  return (
+  return <UserList users={users} />(
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
