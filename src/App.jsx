@@ -15,10 +15,12 @@ function App() {
   const { name, age } = person;
   console.log('Destructured:', name, age);
 
-  return <UserList users={users} />(
+  const isLoggedIn = true;
+
+  return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">q
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
@@ -37,6 +39,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <div>
+        {isLoggedIn ? <p>Welcome back!</p> : <p>Please log in</p>}
+      </div>
+
     </>
   )
 }
